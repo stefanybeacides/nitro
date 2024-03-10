@@ -239,11 +239,52 @@ form .btn-enviar input{
 @media screen and (max-width: 1020px){
     /*CLASSES GERAIS*/
     .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
         flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30;
     }
 
     /*CABEÇALHO*/
     .menu-desktop, .btn-contat{
         display: none;
+    }
+
+    /*TOPO DO SITE*/
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /*SERVICOS*/
+    section.servicos {
+        padding: 40px 8%;
+    }
+
+    /*CARTAS*/
+    section.cartas {
+        padding: 80px 8%;
+    }
+
+    .cartas .txt-cartas h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
     }
 }
