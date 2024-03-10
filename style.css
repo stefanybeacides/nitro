@@ -35,6 +35,7 @@ h2.titulo{
     color: #fff;
     font-size: 38px;
     text-align: center;
+    line-height: 1;
 }
 
 h2.titulo span{
@@ -237,6 +238,10 @@ form .btn-enviar input{
 }
 
 @media screen and (max-width: 1022px){
+
+    section.topo-do-site {
+        padding-top: 20px;
+    }
     
     /*CLASSES GERAIS*/
     .flex{
@@ -250,6 +255,7 @@ form .btn-enviar input{
     h2.titulo{
         font-size: 34px;
         line-height: 30;
+        line-height: 1;
     }
 
     /*CABEÇALHO*/
@@ -275,12 +281,12 @@ form .btn-enviar input{
 
     /*SERVICOS*/
     section.servicos{
-        padding: 40px 8%;
+        padding: 40px 8% 0;
     }
 
     /*CARTAS*/
     section.cartas{
-        padding: 80px 8%;
+        padding: 80px 8% 0;
     }
 
     .cartas .txt-cartas h2{
