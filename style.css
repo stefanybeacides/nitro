@@ -236,7 +236,8 @@ form .btn-enviar input{
     transition: .2s;
 }
 
-@media screen and (max-width: 1020px){
+@media screen and (max-width: 1022px){
+    
     /*CLASSES GERAIS*/
     .flex{
         flex-direction: column;
@@ -246,7 +247,7 @@ form .btn-enviar input{
         flex-direction: column-reverse;
     }
 
-    h2.titulo {
+    h2.titulo{
         font-size: 34px;
         line-height: 30;
     }
@@ -273,16 +274,16 @@ form .btn-enviar input{
     }
 
     /*SERVICOS*/
-    section.servicos {
+    section.servicos{
         padding: 40px 8%;
     }
 
     /*CARTAS*/
-    section.cartas {
+    section.cartas{
         padding: 80px 8%;
     }
 
-    .cartas .txt-cartas h2 {
+    .cartas .txt-cartas h2{
         font-size: 34px;
         line-height: 35px;
         text-align: center;
