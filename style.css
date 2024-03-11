@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #000;
+    background-color: #fff;
     height: 100vh;
 }
 
@@ -25,6 +25,7 @@ body{
     font-size: 18px;
     font-weight: 600;
     background-color: #171a4a;
+    color: #fff;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -32,7 +33,7 @@ body{
 }
 
 h2.titulo{
-    color: #fff;
+    color: #000;
     font-size: 38px;
     text-align: center;
     line-height: 1;
@@ -49,7 +50,7 @@ button:hover, form .btn-enviar input:hover{
 
 /* ESTILO DO CABEÇALHO*/
 header{
-    padding: 40px 4%;
+    padding: 0px 4%;
 }
 
 header {
@@ -58,7 +59,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #000;
+    background-color: #fff;
 }
 
 header > .interface{
@@ -75,7 +76,8 @@ header a{
 }
 
 header nav.menu-desktop a:hover{
-    color: #fff;
+    color: #000;
+    font-weight: 200;
     transform: scale(1.05);
 }
 
@@ -101,10 +103,11 @@ body {
 .btn-abrir-menu i{
     color: #171a4a;
     font-size: 40px;
+    cursor: pointer;
 }
 
 .menu-mobile{
-    background-color: #000;
+    background-color: #fff;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -113,10 +116,11 @@ body {
     width: 0%;
     overflow: hidden;
     transition: .5s;
+    cursor: pointer;
 }
 
 .menu-mobile.abrir-menu{
-    width: 70%;
+    width: 20%;
 }
 
 .menu-mobile.abrir-menu ~ .overlay-menu{
@@ -137,7 +141,7 @@ body {
 }
 
 .menu-mobile nav ul li a{
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -146,7 +150,7 @@ body {
 
 .menu-mobile nav ul li a:hover{
     background-color: #171a4a;
-    color: #000;
+    color: #fff;
 }
 
 .overlay-menu{
@@ -172,7 +176,7 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site h1{
-    color: #fff;
+    color: #000;
     font-size: 42px;
     line-height: 40px;
 }
@@ -182,7 +186,7 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site .txt-topo-site p{
-    color: #fff;
+    color: #000;
     margin: 40px 0;
 }
 
@@ -210,16 +214,18 @@ section.servicos .flex{
 }
 
 .servicos .servicos-box{
-    color: #fff;
+    color: #000;
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
+    margin-bottom: 30px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .servicos .servicos-box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 20px #ffffff5d;
+    box-shadow: 0 0 20px #00000081;
 }
 
 .servicos .servicos-box i{
@@ -246,16 +252,18 @@ section.cartas .flex{
 }
 
 .cartas .cartas-box{
-    color: #fff;
+    color: #000;
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
+    margin-bottom: 70px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .cartas .cartas-box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 20px #ffffff5d;
+    box-shadow: 0 0 20px #00000081;
 }
 
 .cartas .cartas-box i{
@@ -285,12 +293,12 @@ form{
 
 form input, form textarea{
     width: 100%;
-    background-color: #212121;
+    background-color: #40269625;
     border: 0;
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
-    color: #fff;
+    color: #000;
     font: 18px;
 }
 
@@ -307,7 +315,7 @@ form .btn-enviar{
 form .btn-enviar input{
     width: 120px;
     background-color: #171a4a;
-    color: #000;
+    color: #fff;
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
@@ -374,7 +382,7 @@ form .btn-enviar input{
 
 /*ESTILO RODAPÉ*/
 footer{
-    padding: 40px 4%;
+    padding: 0px 4%;
     box-shadow: 0 0 4px 10px #ffffff1d;
 }
 
