@@ -120,7 +120,7 @@ body {
 }
 
 .menu-mobile.abrir-menu{
-    width: 20%;
+    width: 30%;
 }
 
 .menu-mobile.abrir-menu ~ .overlay-menu{
@@ -383,7 +383,7 @@ form .btn-enviar input{
 /*ESTILO RODAPÉ*/
 footer{
     padding: 0px 4%;
-    box-shadow: 0 0 4px 10px #ffffff1d;
+    box-shadow: 0 0 4px 10px #0000001e;
 }
 
 footer .flex{
@@ -391,7 +391,7 @@ footer .flex{
 }
 
 footer .line-footer{
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 .borda{
@@ -399,8 +399,8 @@ footer .line-footer{
 }
 
 .btn-whatsapp button{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: none;
     background-color: #00ff08;
