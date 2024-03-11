@@ -52,6 +52,15 @@ header{
     padding: 40px 4%;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000;
+}
+
 header > .interface{
     display: flex;
     align-items: center;
@@ -77,6 +86,10 @@ header nav ul{
 header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
+}
+
+body {
+    padding-top: 200px;
 }
 
 .btn-contat button:hover{
@@ -283,7 +296,7 @@ form input, form textarea{
 
 form textarea{
     resize: none;
-    max-width: 200px;
+    max-width: 500px;
 }
 
 form .btn-enviar{
@@ -357,4 +370,43 @@ form .btn-enviar input{
         line-height: 35px;
         text-align: center;
     }
+}
+
+/*ESTILO RODAPÉ*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 4px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #171a4a;
+}
+
+.btn-whatsapp button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00ff08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+footer .line-footer p i{
+    color: #00ff08;
+    font-size: 22px;
+}
+
+footer .line-footer p{
+    color: #fff;
 }
