@@ -369,6 +369,15 @@ form .btn-enviar input{
         padding: 40px 8% 0;
     }
 
+    @media screen and (max-width: 1020px){
+        .servicos .servicos-box,
+        .cartas .cartas-box{
+            border: 1px solid black; /* Adicione a borda conforme necessário */
+            padding: 20px; /* Adicione o espaçamento interno conforme necessário */
+            margin-bottom: 20px; /* Adicione o espaçamento inferior conforme necessário */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
     /*CARTAS*/
     section.cartas{
         padding: 80px 8% 0;
