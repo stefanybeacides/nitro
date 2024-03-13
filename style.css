@@ -386,6 +386,21 @@ form .btn-enviar input{
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
+        @media only screen and (min-width: 0px) and (max-width: 1022px) {
+            .btn-contat {
+                display: none;
+            }
+            .btn-simule {
+                display: none;
+            }
+            .btn-contat-mobile {
+                display: block;
+            }
+            .btn-simule-mobile {
+                display: block;
+            }
+        }
+
     /*CARTAS*/
     section.cartas{
         padding: 80px 8% 0;
@@ -396,6 +411,21 @@ form .btn-enviar input{
         line-height: 35px;
         text-align: center;
 
+    }
+
+    @media only screen and (min-width: 0px) and (max-width: 1022px) {
+        .btn-contat {
+            display: none;
+        }
+        .btn-simule {
+            display: none;
+        }
+        .btn-contat-mobile {
+            display: block;
+        }
+        .btn-simule-mobile {
+            display: block;
+        }
     }
 }
 }
