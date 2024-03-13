@@ -250,6 +250,50 @@ html{
     scroll-behavior: smooth;
 }
 
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 1022px) {
+    .btn-contat-desktop button {
+        display: none;
+    }
+    .btn-contat-mobile button {
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: #171a4a;
+        color: #fff;
+        border: 0;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: .2s;
+        margin: 0 auto; /* Centralizar horizontalmente */
+        display: block;
+    }
+}
+
+/* Estilos para dispositivos de desktop */
+@media only screen and (min-width: 1023px) {
+    .btn-contat-desktop button {
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0 auto; /* Centralizar horizontalmente */
+        background-color: #171a4a;
+        color: #fff;
+        border: 0;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: .2s;
+        display: block;
+    }
+    .btn-contat-mobile button {
+        display: none;
+    }
+}
+
+
+
+
+
 /*ESTILO DAS CARTAS*/
 section.cartas{
     padding: 40px 4%;
@@ -284,6 +328,7 @@ section.cartas .flex{
     font-size: 28px;
     margin: 15px 0;
 }
+
 
 /* ESTILO DO FORM DE CONTATO*/
 section.formulario{
@@ -386,20 +431,15 @@ form .btn-enviar input{
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        @media only screen and (min-width: 0px) and (max-width: 1022px) {
-            .btn-contat {
-                display: none;
-            }
-            .btn-simule {
+        @media only screen and (max-width: 1022px) {
+            .btn-contat-desktop {
                 display: none;
             }
             .btn-contat-mobile {
                 display: block;
             }
-            .btn-simule-mobile {
-                display: block;
-            }
         }
+    }
 
     /*CARTAS*/
     section.cartas{
@@ -413,21 +453,14 @@ form .btn-enviar input{
 
     }
 
-    @media only screen and (min-width: 0px) and (max-width: 1022px) {
-        .btn-contat {
-            display: none;
-        }
-        .btn-simule {
+    @media only screen and (max-width: 1022px) {
+        .btn-contat-desktop {
             display: none;
         }
         .btn-contat-mobile {
             display: block;
         }
-        .btn-simule-mobile {
-            display: block;
-        }
     }
-}
 }
 
 /*ESTILO RODAPÉ*/
