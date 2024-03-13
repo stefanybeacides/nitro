@@ -14,11 +14,84 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="menu.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Nitro - Soluções Financeiras</title>
     
 </head>
 <body>
+    <script>
+        function abrirModal() {
+       
+            function formatarValor(valor) {
+    // Arredondar o valor para duas casas decimais
+    valor = Math.round(valor * 100) / 100;
+    // Converter o valor para string e substituir ponto por vírgula
+    var valorFormatado = valor.toFixed(2).replace('.', ',');
+    // Separar a parte inteira da parte decimal
+    var partes = valorFormatado.split(',');
+    // Concatenar a parte inteira com ponto e adicionar zeros nos centavos, se necessário
+    var parteInteira = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    var parteDecimal = partes[1] ? ',' + partes[1].padEnd(2, '0') : ',00';
+    // Retornar o valor formatado com ponto e vírgula
+    return parteInteira + parteDecimal;
+}
+
+
+            Swal.fire({
+    title: 'Escolha o Valor da Carta',
+    html: `
+        <select id="valorCarta" class="swal2-select custom-select" style="width: 40%">
+            <option value="200000">R$200.000,00</option>
+            <option value="300000">R$300.000,00</option>
+            <option value="400000">R$400.000,00</option>
+            <option value="500000">R$500.000,00</option>
+        </select>
+        <br><br>
+        <select id="numeroMeses" class="swal2-select custom-select" style="width: 40%">
+            <option value="60">60 meses</option>
+            <option value="90">90 meses</option>
+            <option value="120">120 meses</option>
+            <option value="180">180 meses</option>
+        </select>
+    `,
+    showCancelButton: true,
+    confirmButtonText: 'Selecionar',
+    cancelButtonText: 'Cancelar',
+    focusConfirm: false,
+    preConfirm: () => {
+        // Obter os valores selecionados nos comboboxes
+        var valorCarta = parseFloat(document.getElementById("valorCarta").value.replace(".", "").replace(",", "."));
+        var numeroMeses = parseInt(document.getElementById("numeroMeses").value);
+        var taxaJuros = 0.02; // 2% ao mês
+
+        // Calcular o valor total com juros
+        var valorTotal = valorCarta * (1 + taxaJuros);
+
+        // Calcular o valor da parcela para o prazo escolhido
+        var valorParcela = valorTotal / numeroMeses;
+
+
+        Swal.fire({
+    title: 'Valor da proposta:',
+    html: `
+        <p>Valor Total com Juros: R$${formatarValor(valorTotal)}</p>
+        <p>Parcela para ${numeroMeses} meses: R$${formatarValor(valorParcela)}</p>
+    `,
+    icon: 'success',
+    showCancelButton: true,
+    confirmButtonText: 'Entrar em Contato',
+    cancelButtonText: 'Fechar',
+    showCloseButton: true,
+    focusConfirm: false,
+    preConfirm: () => {
+        window.location.href = 'https://api.whatsapp.com/send?phone=5511951923644';
+    }
+});
+    }
+});
+        }
+    </script>
     <script>
         function scrollToSection(sectionId, offset = 150) {
             const sectionOffset = document.getElementById(sectionId).offsetTop - offset;
@@ -121,6 +194,11 @@
                         <p>Consórcio é a modalidade de compra baseada na união de pessoas -
                             físicas ou jurídicas - em grupos, com a finalidade de formar poupança
                             para a aquisição de bens móveis, imóveis ou serviços.</p>
+                            <div style="padding-top: 10%" class="btn-contat">
+                                <a href="#">
+                                    <button>Conheça</button>
+                                </a>
+                            </div><!--fim btn-contat-->
                     </div><!--fim servicos-box-->
 
                     <div class="servicos-box">
@@ -129,6 +207,11 @@
                         <p>Financiamento é uma operação financeira em que a parte financiadora,
                             em geral uma instituição financeira, fornece recursos para outra parte
                             que está sendo financiada, de modo que esta possa executar algum investimento específico previamente acordado.</p>
+                            <div style="padding-top: 10%" class="btn-contat">
+                                <a href="#">
+                                    <button>Conheça</button>
+                                </a>
+                            </div><!--fim btn-contat-->
                     </div><!--fim servicos-box-->
 
                     <div class="servicos-box">
@@ -136,13 +219,22 @@
                         <h3>Carta de Crédito</h3>
                         <p>A venda de carta de crédito contemplada é realizada por um consorciado, participante de um grupo, cuja cota tenha sido contemplada por
                             sorteio ou lance, em Assembleia Geral Ordinária.</p>
+                            <div style="padding-top: 10%" class="btn-contat">
+                                <a href="#">
+                                    <button>Conheça</button>
+                                </a>
+                            </div><!--fim btn-contat-->
                     </div><!--fim servicos-box-->
 
                     <div class="servicos-box">
                         <i class="bi bi-4-circle"></i>
                         <h3>Home Equality</h3>
-                        <p>Home equity é o termo em inglês para a modalidade de empréstimo
-                            com imóvel de garantia.</p>
+                        <p>Home equity é o termo em inglês para a modalidade de empréstimo com imóvel de garantia.</p>
+                            <div style="padding-top: 10%" class="btn-contat">
+                                <a href="#">
+                                    <button>Conheça</button>
+                                </a>
+                            </div><!--fim btn-contat-->
                     </div><!--fim servicos-box-->
                 </div><!--fim flex-->
             </div><!--fim interface-->
@@ -157,29 +249,40 @@
                         <i class="bi bi-coin"></i>
                         <h3>R$200.000,00</h3>
                         <p>Parcelas e detalhes</p>
+                        <div style="padding-top: 10%" class="btn-contat">
+                            <button onclick="abrirModal()">Simule!</button>
+                        </div><!--fim btn-contat-->
                     </div><!--fim cartas-box-->
 
                     <div class="cartas-box">
                         <i class="bi bi-coin"></i>
                         <h3>R$300.000,00</h3>
                         <p>Parcelas e detalhes</p>
+                        <div style="padding-top: 10%" class="btn-contat">
+                            <button onclick="abrirModal()">Simule!</button>
+                        </div><!--fim btn-contat-->
                     </div><!--fim cartas-box-->
 
                     <div class="cartas-box">
                         <i class="bi bi-coin"></i>
                         <h3>R$400.000,00</h3>
                         <p>Parcelas e detalhes</p>
+                        <div style="padding-top: 10%" class="btn-contat">
+                            <button onclick="abrirModal()">Simule!</button>
+                        </div><!--fim btn-contat-->
                     </div><!--fim cartas-box-->
 
                     <div class="cartas-box">
                         <i class="bi bi-coin"></i>
                         <h3>R$500.000,00</h3>
                         <p>Parcelas e detalhes</p>
+                        <div style="padding-top: 10%" class="btn-contat">
+                                <button onclick="abrirModal()">Simule!</button>
+                        </div><!--fim btn-contat-->
                     </div><!--fim cartas-box-->
                 </div><!--fim flex-->
             </div><!--fim interface-->
         </section><!--fim cartas-->
-
         <section class="formulario">
             <section id="contato"></section><!--ADICIONADO AGORA-->
             <div class="interface">
@@ -197,22 +300,14 @@
     </main>
 
     <footer>
-        <div class="interface">
-                <div class="line-footer">
-                    <div class="flex">
-                    <div class="logo-footer">
-                        <img src="images/logonitro_nobg.png" width="120px" height="120px">
-                    </div><!--logo footer-->
-                    <div class="btn-whatsapp">
-                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                    </div><!--btn-whatsapp-->
-            </div>
-            </div><!--line-footer-->
-
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i><a href="mailto:contato@nitro.com.br">contato@nitro.com.br</a></p>
-            </div><!--line-footer-->
-        </div><!--interface-->
-    </footer>
+        <div class="footer-content">
+          <p>Copyright © 2024 Stefany Beacides</p>
+        </div>
+        <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+<a id="robbu-whatsapp-button" class="right" target="_blank" href="https://api.whatsapp.com/send?phone=5511951923644">
+  <div class="rwb-tooltip">Entre em contato!</div>
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+</a>
+      </footer>
 </body>
 </html>

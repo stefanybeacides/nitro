@@ -222,6 +222,7 @@ section.servicos .flex{
     margin-bottom: 30px;
     transition: .2s;
     cursor: pointer;
+    text-align: center;
 }
 
 .servicos .servicos-box:hover{
@@ -237,6 +238,12 @@ section.servicos .flex{
 .servicos .servicos-box h3{
     font-size: 28px;
     margin: 15px 0;
+}
+
+.btn-contat button:hover{
+    box-shadow: 0px 0px 8px #171a4a;
+    transform: scale(1.05);
+    align-content: center;
 }
 
 html{
@@ -260,6 +267,7 @@ section.cartas .flex{
     margin-bottom: 70px;
     transition: .2s;
     cursor: pointer;
+    text-align: center;
 }
 
 .cartas .cartas-box:hover{
@@ -387,13 +395,16 @@ form .btn-enviar input{
         font-size: 34px;
         line-height: 35px;
         text-align: center;
+
     }
+}
 }
 
 /*ESTILO RODAPÉ*/
 footer{
     padding: 0px 4%;
     box-shadow: 0 0 4px 10px #0000001e;
+    text-align: center;
 }
 
 footer .flex{
@@ -430,4 +441,34 @@ footer .line-footer p{
 }
 .spacer {
     height: 90px; /* Ajuste conforme necessário */
+}
+
+/* CSS (styles.css) */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.popup .fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup .fechar:hover,
+.popup .fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
