@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTS--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--FIM GOOGLE FONTS-->
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--FIM BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="menu.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Nitro - Financiamento</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logonitro_nobg.png" alt="logonitro" width="120px" height="120px">
+                </a>
+            </div><!--fim logo-->
+        
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a class="smooth-scroll" href="#topo-do-site">Início</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#servicos">Serviços</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#cartas">Cartas</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav><!--fim menu-desktop-->
+
+        <div class="btn-contat">
+            <a href="#">
+                <button>Contato</button>
+            </a>
+        </div><!--fim btn-contat-->
+
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+        </div>
+
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a class="smooth-scroll" href="#topo-do-site">Início</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#servicos">Serviços</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#cartas">Cartas</a></li>
+                    <li><a class="smooth-scroll" onclick="scrollToSection()" href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+
+        </div><!--fim menu-mobile-->
+        <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--fim interface-->
+    </header>
+
+    <main>
+        <section  class="topo-do-site">
+            <div class="interface">
+                <section id="topo-do-site"></section><!--ADICIONADO AGORA-->
+               <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>CONHEÇA O <span>FINANCIAMENTO.</span></h1>
+                        <p>Financiamento é uma operação financeira em que a parte financiadora,
+                            em geral uma instituição financeira, fornece recursos para outra parte
+                            que está sendo financiada, de modo que esta possa executar algum investimento específico previamente acordado.</p>
+
+                            <div class="btn-contat">
+                                <a href="#">
+                                    <button>Gostou? Entre em contato!</button>
+                                </a>
+                            </div>
+
+                    </div><!--fim txt-topo-site-->
+                    <div class="img-topo-site">
+                        <img src="images/img_financiamento.png" width="550" height="200">
+                    </div>
+               </div><!--fim flex-->
+            </div><!--fim interface-->
+        </section><!--fim topo-do-site-->
+
+        <section class="formulario">
+            <section id="contato"></section><!--ADICIONADO AGORA-->
+            <div class="interface">
+                <h2 class="titulo">FALE <span>CONOSCO.</span></h2>
+
+                <form action="https://formspree.io/f/xoqglkrk" method="post">
+                    <input type="text" name="Nome: " id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="E-mail: " id="" placeholder="Seu e-mail:" required>
+                    <input type="text" name="Celular: " id="" placeholder="Seu celular:">
+                    <textarea name="" id="Mensagem: " placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--fim interface-->
+        </section><!--fim formulario-->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <p>Copyright © 2024 Stefany Beacides</p>
+        </div>
+        <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+<a id="robbu-whatsapp-button" class="right" target="_blank" href="https://api.whatsapp.com/send?phone=5511951923644">
+  <div class="rwb-tooltip">Entre em contato!</div>
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+</a>
+      </footer>
+</body>
+</html>
