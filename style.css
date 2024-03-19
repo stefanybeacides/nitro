@@ -413,6 +413,10 @@ form .btn-enviar input{
         width: 100%;
     }
 
+    .btn-contat {
+        display: block;
+    }
+
     /*SERVICOS*/
     section.servicos{
         padding: 40px 8% 0;
