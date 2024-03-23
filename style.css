@@ -503,5 +503,41 @@ footer .line-footer p{
     color: #fff;
 }
 .spacer {
-    height: 90px; /* Ajuste conforme necessário */
+    height: 90px;
+}
+
+/* Estilo personalizado para o carrossel */
+.carousel {
+    width: 470px; /* Defina a largura desejada para o carrossel */
+    height: 470px; /* Defina a altura desejada para o carrossel */
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* Ocupar toda a altura do item do carrossel */
+    object-fit: cover; /* Ajuste para garantir que as imagens cubram todo o espaço */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: #000;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #000;
+    top: 50%;
+    width: 100%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #00000033; /* Cor do ícone */
 }

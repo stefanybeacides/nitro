@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--FIM BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="style.css">
+    <!--BOOTSTRAP CARROSSEL-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--FIM BOOTSTRAP CARROSSEL-->
 
     <script src="menu.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -64,30 +67,61 @@
         <div class="overlay-menu" id="overlay-menu"></div>
         </div><!--fim interface-->
     </header>
-
     <main>
-        <section  class="topo-do-site">
+        <section class="topo-do-site">
             <div class="interface">
-                <section id="topo-do-site"></section><!--ADICIONADO AGORA-->
-               <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>CONHEÇA O <span>CONSÓRCIO.</span></h1>
-                        <p>Consórcio é a modalidade de compra baseada na união de pessoas -
-                            físicas ou jurídicas - em grupos, com a finalidade de formar poupança
-                            para a aquisição de bens móveis, imóveis ou serviços. A formação
-                            desses grupos é feita por uma Administradora de Consórcios , autorizada e fiscalizada pelo Banco Central do Brasil.</p>
-
+                <section id="topo-do-site"></section>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="txt-topo-site">
+                            <h1>CONHEÇA O <span>CONSÓRCIO.</span></h1>
+                            <p>Consórcio é a modalidade de compra baseada na união de pessoas -
+                                físicas ou jurídicas - em grupos, com a finalidade de formar poupança
+                                para a aquisição de bens móveis, imóveis ou serviços. A formação
+                                desses grupos é feita por uma Administradora de Consórcios , autorizada e fiscalizada pelo Banco Central do Brasil.</p>
                             <div class="btn-contat">
                                 <a href="https://wa.me/5511951923644">
                                     <button>Gostou? Entre em contato!</button>
                                 </a>
                             </div>
-
-                    </div><!--fim txt-topo-site-->
-                    <div class="img-topo-site">
-                        <img src="images/img_consorcio.png" width="550" height="200">
-                    </div>
-               </div><!--fim flex-->
+                        </div><!--fim txt-topo-site-->
+                    </div><!--fim col-md-6-->
+                    <div class="col-md-6">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/cinco_vantagens_resized.jpg" class="d-block w-100" alt="Imagem 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/vantagem01_resized.jpg" class="d-block w-100" alt="Imagem 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/vantagem02_resized.jpg" class="d-block w-100" alt="Imagem 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/vantagem03.jpg" class="d-block w-100" alt="Imagem 4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/vantagem04.jpg" class="d-block w-100" alt="Imagem 5">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/vantagem05.jpg" class="d-block w-100" alt="Imagem 6">
+                                </div>
+                            </div>
+                            <!-- Botões de controle centralizados -->
+                            <div class="carousel-control-container">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!--fim col-md-6-->
+                </div><!--fim row-->
             </div><!--fim interface-->
         </section><!--fim topo-do-site-->
 
@@ -109,7 +143,7 @@
 
     <footer>
         <div class="footer-content">
-          <p>Copyright © 2024 Stefany Beacides</p>
+          <p>Copyright © 2024 Stefany Beacides - All Rights Reserved.</p>
         </div>
         <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
 <a id="robbu-whatsapp-button" class="right" target="_blank" href="https://api.whatsapp.com/send?phone=5511951923644">
@@ -117,5 +151,7 @@
   <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
 </a>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
