@@ -63,7 +63,7 @@
         // Obter os valores selecionados nos comboboxes
         var valorCarta = parseFloat(document.getElementById("valorCarta").value.replace(".", "").replace(",", "."));
         var numeroMeses = parseInt(document.getElementById("numeroMeses").value);
-        var taxaJuros = 0.02; // 2% ao mês
+        var taxaJuros = 0.00; // 0% ao mês
 
         // Calcular o valor total com juros
         var valorTotal = valorCarta * (1 + taxaJuros);
@@ -75,7 +75,7 @@
         Swal.fire({
     title: 'Valor da proposta:',
     html: `
-        <p>Valor Total com Juros: R$${formatarValor(valorTotal)}</p>
+        <p>Valor Total: R$${formatarValor(valorTotal)}</p>
         <p>Parcela para ${numeroMeses} meses: R$${formatarValor(valorParcela)}</p>
     `,
     icon: 'success',
